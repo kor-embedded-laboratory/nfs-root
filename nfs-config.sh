@@ -12,7 +12,7 @@ printf "# /srv/nfs4        gss/krb5i(rw,sync,fsid=0,crossmnt,no_subtree_check)\n
 printf "# /srv/nfs4/homes  gss/krb5i(rw,sync,no_subtree_check)\n" >> exports
 printf "#\n\n" >> exports
 
-printf "/home/$(whoami)/EmbeddedPackage/nfs-root/rpi3b_root_fs *(rw,sync,no_root_squash,no_subtree_check)\n" >> exports
+printf "${PWD}/rpi3b_root_fs *(rw,sync,no_root_squash,no_subtree_check)\n" >> exports
 printf "\n" >> exports
 
 sudo cp exports /etc/exports
